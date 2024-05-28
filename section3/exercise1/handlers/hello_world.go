@@ -10,5 +10,5 @@ func HelloWorld(rw http.ResponseWriter, req *http.Request) {
 		http.NotFound(rw, req)
 		return
 	}
-	fmt.Fprintf(rw, "Hello, World!")
+	fmt.Fprintf(rw, "Hello, World!\n")
 }
