@@ -18,7 +18,7 @@ func main() {
 	if os.Getenv("ENV") == "" {
 		err := godotenv.Load(".env")
 		if err != nil {
-		  log.Fatal("Error loading .env file")
+			log.Fatal("Error loading .env file")
 		}
 	}
 
@@ -35,10 +35,9 @@ func main() {
 
 	v1.GET("/wallet", walletHandler.CreateWallet)
 
-
 	httpServer := &http.Server{
-		Addr:         os.Getenv("SERVER_ADDRESS"),
-		Handler:      router,
+		Addr:    os.Getenv("SERVER_ADDRESS"),
+		Handler: router,
 	}
 
 	log.Println("env: ", "flutter_key: ", fluttwaveSecretKey)

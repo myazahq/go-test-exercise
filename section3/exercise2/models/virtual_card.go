@@ -1,15 +1,15 @@
 package models
 
 type CreateVirtualCardRequest struct {
-	Currency    string `json:"currency"`
-	Amount      int32  `json:"amount"`
-	FirstName   string `json:"first_name"`
-	LastName    string `json:"last_name"`
-	DateOfBirth string `json:"date_of_birth"` //expected format YYYY/MM/DD
-	Email       string `json:"email"`
-	Phone       string `json:"phone"`
-	Title       string `json:"title"`
-	Gender      string `json:"gender"`
+	Currency    string `json:"currency" binding:"required"`
+	Amount      int32  `json:"amount" binding:"required"`
+	FirstName   string `json:"first_name" binding:"required"`
+	LastName    string `json:"last_name" binding:"required"`
+	DateOfBirth string `json:"date_of_birth" binding:"required"` //expected format YYYY/MM/DD
+	Email       string `json:"email" binding:"required"`
+	Phone       string `json:"phone" binding:"required"`
+	Title       string `json:"title" binding:"required"`
+	Gender      string `json:"gender" binding:"required"`
 }
 
 type CreateVirtualCardResponse struct {

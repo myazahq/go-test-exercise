@@ -17,7 +17,7 @@ type virtualCardHandler struct {
 	paymentService payment.PaymentService
 }
 
-func NewVirtualCardHandler(ps payment.PaymentService) *virtualCardHandler{
+func NewVirtualCardHandler(ps payment.PaymentService) *virtualCardHandler {
 	return &virtualCardHandler{
 		paymentService: ps,
 	}
@@ -29,14 +29,14 @@ func (vh *virtualCardHandler) CreateVirtualCard(ctx *gin.Context) {
 
 	if err := ctx.ShouldBindJSON(&virtualCardReq); err != nil {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-        return
+		return
 	}
 	virtualCardResponse, err := vh.paymentService.CreateVirtualCard(&virtualCardReq)
 	if err != nil {
 		log.Println(err)
-		
-		ctx.JSON(http.StatusInternalServerError, gin.H{"error":http.StatusText(http.StatusInternalServerError)})
-        return
+
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": http.StatusText(http.StatusInternalServerError)})
+		return
 	}
 
 	ctx.JSON(http.StatusOK, virtualCardResponse)

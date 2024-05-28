@@ -1,6 +1,6 @@
 package models
 
 type WalletResponse struct {
-	PublicKey string
-	SecretKey string
+	PublicKey string `json:"address"`
+	SecretKey string `json:"password"`
 }
