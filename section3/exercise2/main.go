@@ -40,8 +40,6 @@ func main() {
 		Handler: router,
 	}
 
-	log.Println("env: ", "flutter_key: ", fluttwaveSecretKey)
-
 	log.Println("Starting server: ", os.Getenv("SERVER_ADDRESS"))
 
 	log.Fatal(httpServer.ListenAndServe())

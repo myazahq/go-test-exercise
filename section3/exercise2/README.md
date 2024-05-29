@@ -18,15 +18,15 @@ Endpoint
 Payload
 ```
 {
-	"currency": "USD",
-	"amount": 100,
-	"first_name": "Tobi",
-	"last_name": "Olusola",
-	"date_of_birth": "2024/05/28",
-	"email": "email@email.com",
-	"phone": "09000000000",
-	"title": "Mrs",
-	"gender": "Unknown"
+    "currency": "USD",
+    "amount":5,
+    "first_name": "Example",
+    "last_name": "User",
+    "date_of_birth": "1996/12/30",
+    "email": "userg@example.com",
+    "phone": "07030000000",
+    "title": "MR",
+    "gender": "M",
 }
 ```
 Response
