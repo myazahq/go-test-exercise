@@ -6,6 +6,7 @@ import "fmt"
 func factorial(n int) int {
 	result := 1.00
 	for i := 1; i <= n; i++ {
+		// Here because of Go being a strictly typed lana
 		result += i
 	}
 	return result
